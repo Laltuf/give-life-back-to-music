@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+/*Fonte Shrikhand*/
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/*font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Music&display=swap');
+
+body{
+   width: 100vw;
+   height: 100vh; 
+   margin: auto;
+   background-color: #242424;
+    overflow-x: hidden;
+   font-family: "Noto Music", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100vw;
+   height: 100vh;
+}
+
+/*Lado da Logo (esquerdo)*/
+ #img1{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    
+} #img1 > img{
+    display: block;
+    width: 500px;
+    height: 500px;
+}
+
+/*Lado do cadastro (Direito)*/
+
+.container2{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #242424;
+}
+.filho2{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px 90px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #AEB6B8;
+    background-color: #242424;
+} 
+.filho2 > h1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+    font-weight: 600;
+    margin: 0;
+    font-size: 50px;
+    color: #FFD700;
+}
+#texto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+    color: #c3cbcd;
+}
+#linkconta{
+    color: #c3cbcd;
+}
+
+#email{
+    width: 300px;
+} #email input{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    background: 005ad5;
+    color: #000000de;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+#senha{
+    width: 300px;
+} #senha input{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    background: 005ad5;
+    color: #000000de;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+#linksenha{
+    margin: 0px;
+    color: #c3cbcd;
+} #linksenha{
+    margin: 0px;
+}
+#acessar{
+    font-family: "Noto Music", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    color: #242424;
+    background: #FFD700;
+    cursor: pointer;
+    margin-left: 37%;
+}
+
+/* Fundo do modal */
+.modal {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa do modal */
+.modal-content {
+  background: #242424;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px #00000080;
+  width: 350px;
+  text-align: center;
+  color: #FFD700;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Inputs do modal */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  box-shadow: 0px 5px 20px #00000056;
+  margin-left: -2%;
+}
+
+/* Botão cadastrar */
+#cadastrar {
+  background: #FFD700;
+  color: #242424;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1%;
+}
+
+/* Botão fechar */
+#fechar {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+.brilho {
+  position: fixed;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+  animation: piscar 4s linear forwards;
+  pointer-events: none; /* não atrapalha clique */
+  z-index: 9999;
+}
+
+@keyframes piscar {
+  0% { opacity: 0; transform: scale(0.5);}
+  50% { opacity: 1; transform: scale(1);}
+  100% { opacity: 0; transform: scale(0);}
+}
