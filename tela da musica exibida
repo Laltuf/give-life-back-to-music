@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaokê</title>
+    <link rel="stylesheet" href="../CSS/tela musica.css">
+    <link rel="stylesheet" href="../CSS/global.css">
+</head>
+<body>
+
+    <section>
+        <div class="bloco__video">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe id="player" src="" frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                        title="">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="containerfoot">
+            <div class="rodape">
+                <a href="Tela inicial.html"><input type="button" value="Voltar"></a>
+                <a href=""><input type="button" value="Meu perfil"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Simulação de login (futuro backend vai validar isso) ---
+        const logado = true; // trocar para false para testar bloqueio
+        if (!logado) {
+            alert("Você precisa estar logado para acessar as músicas!");
+            window.location.href = "Tela inicial.html"; 
+        }
+
+        // --- Lógica de troca de música ---
+        const params = new URLSearchParams(window.location.search);
+        const musicaId = params.get("id");
+
+        // Lista de músicas (cada id com link e título)
+        const musicas = {
+            1: {
+                titulo: "Single Ladies - Beyoncé",
+                link: "https://player.vimeo.com/video/1111782918"
+            },
+            2: {
+                titulo: "Mr Jorge - Exemplo",
+                link: "https://player.vimeo.com/video/123456789"
+            },
+            3: {
+                titulo: "Péricles - Exemplo",
+                link: "https://player.vimeo.com/video/987654321"
+            },
+            4: {
+                titulo: "Vovó Gagá - Exemplo",
+                link: "https://player.vimeo.com/video/555555555"
+            },
+            5: {
+                titulo: "Loirinha Expresso - Exemplo",
+                link: "https://player.vimeo.com/video/444444444"
+            }
+        };
+
+        // Aplica no iframe
+        if (musicas[musicaId]) {
+            document.getElementById("player").src = musicas[musicaId].link;
+            document.getElementById("player").title = musicas[musicaId].titulo;
+        } else {
+            document.getElementById("player").src = "";
+            alert("Música não encontrada!");
+            window.location.href = "Tela inicial.html";
+        }
+    </script>
+
+</body>
+</html>
