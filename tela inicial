@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio GLBM</title>
+    <link rel="stylesheet" href="../CSS/tela inicial.css">
+    <link rel="stylesheet" href="../CSS/global.css">
+</head>
+<body>
+
+    <div class="tudo">
+
+        <header>
+            <div class="containerheader">
+                <div class="cabecalho">
+                    <h1>GIVE LIFE BACK TO MUSIC</h1>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="containermain">
+                <div class="informacoes">
+                    <!-- Espaço para mensagens de boas-vindas ou login -->
+                </div>
+            </div>
+        </main>
+
+        <nav>
+            <div class="containernav">
+                <div class="containernav2">
+                    <div class="navbar">
+                        
+                        <a href="tela musica.html?id=1">
+                            <div class="blocomusica" id="musica-1"></div>
+                        </a>
+
+                        <a href="tela musica.html?id=2">
+                            <div class="blocomusica" id="musica-2"></div>
+                        </a>
+
+                        <a href="tela musica.html?id=3">
+                            <div class="blocomusica" id="musica-3"></div>
+                        </a>
+
+                        <a href="tela musica.html?id=4">
+                            <div class="blocomusica" id="musica-4"></div>
+                        </a>
+
+                        <a href="tela musica.html?id=5">
+                            <div class="blocomusica" id="musica-5"></div>
+                        </a>
+
+                        <!-- pode adicionar mais aqui -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <footer>
+            <div class="containerfoot">
+                <div class="rodape">
+                    <a href=""><input type="button" value="Voltar"></a>
+                    <a href=""><input type="button" value="Meu perfil"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
